@@ -1,0 +1,74 @@
+{
+    "name": "translation",
+    "displayName": "Translation",
+    "description": "A simple translation plugin(Chinese and English version)",
+    "version": "0.0.1",
+    "license": "MIT",
+    "publisher": "Hyiker",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Hyiker/Translation.git"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.showTranslation"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.showTranslation",
+                "title": "translate"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.showTranslation",
+                "key": "Cmd+Shift+T"
+            }
+        ],
+        "configuration": {
+            "title": "Translation Configurations",
+            "properties": {
+                "translation.displayMethod": {
+                    "type": "string",
+                    "default": "statusBar",
+                    "description": "'statusBar'表示在状态栏中显示，'messageWindow'表示在消息窗口中显示"
+                },
+                "translation.hideTimeout": {
+                    "type": "integer",
+                    "default": 3,
+                    "description": "使用状态栏显示时，显示翻译的持续时间(秒)"
+                },
+                "translation.youdaoAppKey": {
+                    "type": "string",
+                    "description": "有道智云的翻译实例appKey"
+                },
+                "translation.youdaoSecretKey": {
+                    "type": "string",
+                    "description": "有道智云的翻译实例秘钥"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^3.3.1",
+        "vscode": "^1.1.28",
+        "eslint": "^5.13.0",
+        "@types/node": "^10.12.21",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "node-uuid": "^1.4.8"
+    }
+}
