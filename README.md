@@ -14,25 +14,6 @@ VSCode 简洁翻译插件(使用有道智云)
 
 ## Extension Settings
 
-"translation.displayMethod": {
-"type": "string",
-"default": "statusBar",
-"description": "'statusBar'表示在状态栏中显示，'messageWindow'表示在消息窗口中显示"
-},
-"translation.hideTimeout": {
-"type": "integer",
-"default": 3,
-"description": "使用状态栏显示时，显示翻译的持续时间(秒)"
-},
-"translation.youdaoAppKey": {
-"type": "string",
-"description": "有道智云的翻译实例 appKey"
-},
-"translation.youdaoSecretKey": {
-"type": "string",
-"description": "有道智云的翻译实例秘钥"
-}
-
 -   `translation.displayMethod`: 展示翻译的方式 `statusBar`表示在状态栏中显示，`messageWindow`表示在消息窗口中显示
 -   `translation.hideTimeout`: 使用状态栏显示时，显示翻译的持续时间(秒) (只有`statusBar`模式下方可设置)
 -   `translation.youdaoAppKey`: 有道智云应用 ID
