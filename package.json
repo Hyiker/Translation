@@ -2,7 +2,7 @@
     "name": "translation",
     "displayName": "Translation",
     "description": "A simple translation plugin(Chinese and English version)",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "license": "MIT",
     "publisher": "Hyiker",
     "engines": {
@@ -35,6 +35,11 @@
         "configuration": {
             "title": "Translation Configurations",
             "properties": {
+                "translation.API": {
+                    "type": "string",
+                    "default": "google",
+                    "description": "使用的翻译API,默认谷歌(google),可设置为有道智云(youdao)"
+                },
                 "translation.displayMethod": {
                     "type": "string",
                     "default": "statusBar",
@@ -68,6 +73,7 @@
         "@types/mocha": "^2.2.42"
     },
     "dependencies": {
+        "@google-cloud/translate": "^3.0.1",
         "axios": "^0.18.0",
         "node-uuid": "^1.4.8"
     }
