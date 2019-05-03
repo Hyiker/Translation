@@ -1,6 +1,8 @@
 # translation README
 
 VSCode 简洁翻译插件
+使用方法:
+选中需要翻译的部分 按下 Cmd+Shift+T
 
 ## Features
 
